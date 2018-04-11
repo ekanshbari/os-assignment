@@ -100,11 +100,16 @@ void main()
 	scanf("%d",&h);
 	printf("\nEnter the current time (in 24hr clock)" );
 	scanf("%d",&tme);
+	if(h>=0 && tme>=1 && tme<=24){
 	for(i=0;i<h;i++)
 	{
 		pthread_create(&t1,NULL,login,NULL);
 		pthread_join(t1,NULL);
 		printf("TOTAL NO. OF USERS %d \n",pcnt);
 	}
+	}
+	else{printf("\nInvalid Input!!");
+         printf("\nenter once again");
+          main();}
 
 	}
